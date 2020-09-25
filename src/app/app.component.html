@@ -1,0 +1,10 @@
+<h1>Main module</h1>
+<ul>
+  <li *ngFor="let nombre of estudiantes; index as i;"> <span (click)="viewStudent(nombre,i);">{{nombre}}</span> </li>
+</ul>
+<input type="text" [(ngModel)]="estudiantes[iterador]"/>
+<nav>
+  <a routerLink="/delivery-management" routerLinkActive="active">Despachos</a>
+  <a routerLink="/fac-facturas" routerLinkActive="active">Facturacion</a>
+</nav>
+<router-outlet></router-outlet>
